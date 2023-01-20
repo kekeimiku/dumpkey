@@ -261,8 +261,8 @@ pub fn get_offset(task: ffi::mach_port_name_t) -> Result<u64, kern_return_t> {
         return Err(result);
     }
 
-    let mut image_infos = unsafe { core::mem::zeroed::<ffi::dyld_all_image_infos>() };
-    let mut read_len = std::mem::size_of_val(&image_infos) as mach_vm_size_t;
+    let mut image_infos = unsafe { mem::zeroed::<ffi::dyld_all_image_infos>() };
+    let mut read_len = mem::size_of_val(&image_infos) as mach_vm_size_t;
 
     mach_vm_read_overwrite(
         task,
@@ -273,8 +273,8 @@ pub fn get_offset(task: ffi::mach_port_name_t) -> Result<u64, kern_return_t> {
     )?;
 
     // 只需要第一个
-    let mut module = unsafe { core::mem::zeroed::<ffi::dyld_image_info>() };
-    let mut read_len = (core::mem::size_of::<dyld_image_info>()) as mach_vm_size_t;
+    let mut module = unsafe { mem::zeroed::<ffi::dyld_image_info>() };
+    let mut read_len = (mem::size_of::<dyld_image_info>()) as mach_vm_size_t;
     mach_vm_read_overwrite(
         task,
         image_infos.infoArray as mach_vm_address_t,
@@ -283,8 +283,8 @@ pub fn get_offset(task: ffi::mach_port_name_t) -> Result<u64, kern_return_t> {
         &mut read_len,
     )?;
 
-    let mut header = unsafe { core::mem::zeroed::<ffi::mach_header_64>() };
-    let mut read_len = std::mem::size_of_val(&header) as mach_vm_size_t;
+    let mut header = unsafe { mem::zeroed::<ffi::mach_header_64>() };
+    let mut read_len = mem::size_of_val(&header) as mach_vm_size_t;
     mach_vm_read_overwrite(
         task,
         module.imageLoadAddress as u64,
@@ -297,7 +297,7 @@ pub fn get_offset(task: ffi::mach_port_name_t) -> Result<u64, kern_return_t> {
     let mut read_len = mach_vm_size_t::from(header.sizeofcmds);
     mach_vm_read_overwrite(
         task,
-        (module.imageLoadAddress as usize + core::mem::size_of_val(&header)) as _,
+        (module.imageLoadAddress as usize + mem::size_of_val(&header)) as _,
         read_len,
         commands_buffer.as_mut_ptr() as mach_vm_address_t,
         &mut read_len,
