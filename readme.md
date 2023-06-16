@@ -22,3 +22,9 @@ ptrsx-dumper test --pid $(pgrep WeChat |head -1) --path "WeChat+0x5327c90->0->8-
 ```shell
 ptrsx-dumper test --pid $(pgrep WeChat |head -1) --path "WeChat+0x53af490->0->8->8->16->32->8->8->64->8->0->0" -n 32
 ```
+
+### AppStore WeChat Version. 3.8.0 (26253)
+
+```shell
+ptrsx-dumper test --pid $(pgrep WeChat |head -1) --path "WeChat+0x4ea0f48->0->8->8->16->32->8->8->64->8->0->0" -n 32
+```
