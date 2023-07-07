@@ -7,7 +7,7 @@ dumpkey $(pgrep WeChat |head -1)
 key = 0x679c************************************70f34
 ```
 
-## 2023-04-14 这个仓库的代码不再更新，新版本的基址放在readme，推荐使用以下方式
+## 2023-04-14 这个仓库的代码不再更新，之后新版本只在readme更新基址，推荐使用以下方式
 
 > 下载 [ptrsx-dumper](https://github.com/kekeimiku/PointerSearcher-X/releases/tag/v0.2.0) 然后根据对应微信版本执行以下命令
 
