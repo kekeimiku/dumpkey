@@ -17,7 +17,7 @@ key = 0x679c************************************70f34
 ptrsx-dumper test --pid $(pgrep WeChat |head -1) --path "WeChat+0x5327c90->0->8->24->16->32->8->8->64->8->0->0" -n 32
 ```
 
-### WeChat Version. 3.7.1 (25682) 网友贡献（ [#2](https://github.com/kekeimiku/dumpkey/issues/2) 应该是官网版本）
+### WeChat Version. 3.7.1 (25682) （ 网友贡献 [#2](https://github.com/kekeimiku/dumpkey/issues/2) 应该是官网版本）
 
 ```shell
 ptrsx-dumper test --pid $(pgrep WeChat |head -1) --path "WeChat+0x536bc90->0->8->8->16->32->8->8->64->8->0->0" -n 32
