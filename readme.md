@@ -47,6 +47,12 @@ ptrsx-dumper test --pid $(pgrep WeChat |head -1) --path "WeChat+0x4B0F700->0->8-
 ptrsx-dumper test --pid $(pgrep WeChat |head -1) --path "WeChat+0x4C58BC0->0->8->8->16->32->8->8->64->8->0->0" -n 32
 ```
 
+### WeChat Version. 3.8.2 (27317) ([#4](https://github.com/kekeimiku/dumpkey/issues/4) 通过brew安装，应该是官网版本)
+
+```shell
+ptrsx-dumper test -p $(pgrep WeChat |head -1) --path "WeChat+0x4C19580->0->8->8->16->32->8->8->64->8->0->0" -n 32
+```
+
 ### AppStore WeChat Version. 3.8.3 (27318)
 
 ```shell
