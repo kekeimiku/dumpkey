@@ -1,5 +1,6 @@
 use dumpkey::{bytes_to_usize, Process};
 
+// AppStore WeChat 3.6.2 (24457)
 fn main() -> dumpkey::Result<()> {
     let pid = std::env::args().nth(1).ok_or(())?.parse()?;
     let proc = Process::open(pid)?;
