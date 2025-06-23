@@ -4,8 +4,6 @@
 
 ### AppStore WeChat Version. 3.8.10 (28633)
 
-2025-06-23 AppStore中的最新版本 3.8.10 (28633)
-
 > 下载 [dumpkey.zip](https://github.com/kekeimiku/dumpkey/releases)
 
 ```shell
