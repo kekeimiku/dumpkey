@@ -1,6 +1,19 @@
-## Apple M1 Wechat DumpKey
+# Apple M1 Wechat DumpKey
 
-## 2023-04-14 这个仓库的代码不再更新，之后新版本只在readme更新基址，推荐使用以下方式
+## 2025-06-23 复活，最近有需求了，顺便更新一下
+
+### AppStore WeChat Version. 3.8.10 (28633)
+
+2025-06-23 AppStore中的最新版本 3.8.10 (28633)
+
+```shell
+# dumpkey <pid> <dbfile>
+
+# example:
+sudo ./dumpkey $(pgrep WeChat |head -1) /Users/keke/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/[version_id]/[account_id]/Message/msg_0.db
+```
+
+## 2023-04-14 这个仓库的代码不再更新
 
 > 下载 [ptrsx-aarch64-apple-darwin.zip](https://github.com/kekeimiku/PointerSearcher-X/releases/tag/v0.4.1) 然后根据对应微信版本执行以下命令
 
