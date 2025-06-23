@@ -11,6 +11,9 @@
 
 # example:
 sudo ./dumpkey $(pgrep WeChat |head -1) /Users/keke/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/[version_id]/[account_id]/Message/msg_0.db
+
+key: 8390b***********************ac9e299a00076
+sudo ./dumpkey $(pgrep WeChat |head -1)   0.03s user 0.02s system 93% cpu 0.051 total
 ```
 
 ## 2023-04-14 这个仓库的代码不再更新
